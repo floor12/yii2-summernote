@@ -179,7 +179,6 @@
                             else
                                 $note.summernote('pasteHTML', cleanText(text, options.cleaner.newline));
                         }
-                        console.log(text);
                     }
                 }
             }
