@@ -12,7 +12,7 @@ use yii\web\AssetBundle;
 
 class SummernoteAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/floor12/yii2-assets/';
+    public $sourcePath = '@vendor/floor12/yii2-summernote/assets/';
     public $css = [
         'summernote.css',
         'codemirror.css',
@@ -20,9 +20,9 @@ class SummernoteAsset extends AssetBundle
     ];
     public $js = [
         'summernote.conf.js',
-        'summernote.js',
         'codemirror.js',
         'xml.js',
+        'summernote.js',
         'summernote-ru-RU.min.js',
         'summernote-cleaner.js'
     ];
