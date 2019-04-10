@@ -19,13 +19,12 @@ use yii\widgets\InputWidget;
 class Summernote extends InputWidget
 {
     const IMAGE_FOLDER = '/summerfiles/';
-
-    /** @var array */
-    private $defaultOptions = ['class' => 'form-control'];
     /** @var array */
     public $options = [];
     /** @var array */
     public $clientOptions = [];
+    /** @var array */
+    private $defaultOptions = ['class' => 'form-control'];
 
     /** Simple static method to use on controller to process uploaded files
      * @throws BadRequestHttpException
@@ -35,7 +34,7 @@ class Summernote extends InputWidget
         $instanse = UploadedFile::getInstanceByName('file');
 
         $validator = new FileValidator();
-        $validator->extensions = ['jpg', 'jpeg', 'png', 'gif'];
+        $validator->extensions = ['jpg', 'jpeg', 'png', 'gif', 'svg'];
         $validator->maxSize = 2000000;
 
         if (!$validator->validate($instanse))
@@ -53,6 +52,11 @@ class Summernote extends InputWidget
 
         $sizes = getimagesize($savePath);
 
+        $mime = mime_content_type($savePath);
+
+        if ($mime == 'image/svg+xml')
+            return "{$webPath}{$filename}";
+
         if ($sizes[0] > 1000) {
             $img = new SimpleImage();
             $img->load($savePath);
@@ -68,7 +72,7 @@ class Summernote extends InputWidget
             $img->save($savePath);
         }
 
-        echo "{$webPath}{$filename}";
+        return "{$webPath}{$filename}";
     }
 
     /**
