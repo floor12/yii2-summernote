@@ -35,7 +35,7 @@ class Summernote extends InputWidget
 
         $validator = new FileValidator();
         $validator->extensions = ['jpg', 'jpeg', 'png', 'gif', 'svg'];
-        $validator->maxSize = 2000000;
+        $validator->maxSize = 5000000;
 
         if (!$validator->validate($instanse))
             throw new BadRequestHttpException("Ошибка валидации изображения");
