@@ -29,9 +29,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "floor12\\summernote\\": [
-        "src/"
-      ]
+      "floor12\\summernote\\": "src"
     }
   }
 }
