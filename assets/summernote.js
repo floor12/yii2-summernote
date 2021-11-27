@@ -24,7 +24,7 @@
             this.callback = callback;
         }
 
-        Renderer.prototype.render = function ($parent) {
+        Renderer.perototype.render = function ($parent) {
             var $node = $$1(this.markup);
             if (this.options && this.options.contents) {
                 $node.html(this.options.contents);
