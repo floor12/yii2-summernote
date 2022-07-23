@@ -2,8 +2,16 @@
 
 The [Summernote](https://summernote.org/) WYSIWYG-editor [Yii-widget](https://yiiframework.ru/), with all included assets.
 
+[![Latest Stable Version](http://poser.pugx.org/floor12/yii2-summernote/v)](https://packagist.org/packages/floor12/yii2-summernote)
+[![Total Downloads](http://poser.pugx.org/floor12/yii2-summernote/downloads)](https://packagist.org/packages/floor12/yii2-summernote)
+[![Latest Unstable Version](http://poser.pugx.org/floor12/yii2-summernote/v/unstable)](https://packagist.org/packages/floor12/yii2-summernote)
+[![License](http://poser.pugx.org/floor12/yii2-summernote/license)](https://packagist.org/packages/floor12/yii2-summernote)
+[![PHP Version Require](http://poser.pugx.org/floor12/yii2-summernote/require/php)](https://packagist.org/packages/floor12/yii2-summernote)
+
+
 ![Widget example](https://floor12.net/en/files/default/image?hash=81ef4ae8ce4cf1c288ad9dd78ff72ec2&width=1500)
 ## Installation
+
 
 Install the widget via composer:
 Execute the command
@@ -12,7 +20,7 @@ Execute the command
 $ composer require floor12/yii2-summernote
 ```
 
-## Instruction
+## Usage
 
 The simplest example:
 
