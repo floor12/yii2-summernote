@@ -23,6 +23,7 @@ class SummernoteAsset extends AssetBundle
         'xml.js',
         'summernote.conf.js',
         'summernote.min.js',
+        'summernote-image-title.js'
     ];
 
     public $depends = [

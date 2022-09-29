@@ -3,6 +3,9 @@ const summernoteParams = {
     fileClass: null,
     placeholder: 'Введите текст здесь...',
     lang: 'ru-RU',
+    imageTitle: {
+        specificAltField: true,
+    },
     codemirror: {
         theme: 'monokai',
     },
@@ -15,6 +18,13 @@ const summernoteParams = {
         ['insert', ['table']],
         ['misc', ['codeview', 'fullscreen']]
     ],
+    popover: {
+        image: [
+            ['image', ['imageTitle', 'resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
+            ['float', ['floatLeft', 'floatRight', 'floatNone']],
+            ['remove', ['removeMedia']],
+        ],
+    },
     onCreateLink: function (originalLink) {
         return originalLink; // return original link
     },
