@@ -1,7 +1,7 @@
 const summernoteParams = {
     fileField: null,
     fileClass: null,
-    placeholder: 'Введите текст здесь...',
+    placeholder: 'Enter text here...',
     lang: 'ru-RU',
     imageTitle: {
         specificAltField: true,
