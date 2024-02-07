@@ -42,6 +42,7 @@ function sendFile(file, fileField, fileClass) {
     data.append('modelClass', fileClass);
     data.append('attribute', fileField);
     data.append('mode', 'multi');
+    data.append('count', '1');
     data.append('_fileFormToken', yii2FileFormToken);
     data.append("file", file);
     $.ajax({
@@ -55,12 +56,16 @@ function sendFile(file, fileField, fileClass) {
             const fileBlock = $(response);
             const isImage = fileBlock.find('.floor12-file-object').hasClass('floor12-file-object-image');
             const filename = fileBlock.find('.floor12-file-object').data('filename');
+            const hash = fileBlock.find('.floor12-file-object').data('hash');
             const title = fileBlock.find('.floor12-file-object').data('title');
+            console.log(hash);
             $(".floor12-files-widget-list[data-field='" + fileField + "']").append(fileBlock);
-            if (isImage)
-                document.execCommand('insertImage', false, filename);
-            else
+            if (isImage) {
+                // document.execCommand('insertImage', false, filename);
+                document.execCommand('insertText', false, "{{image: " + hash + ", width: 1000, alt: " + title + "}}");
+            } else {
                 document.execCommand('createLink', false, filename.toString());
+            }
         },
         error: function (response) {
             console.error(response);
